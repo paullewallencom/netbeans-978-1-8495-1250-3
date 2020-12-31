@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model modelID="fxc" modelVersion="69" rootInstance="DesignModel1" version="1">
+    <Instance classID="DesignModel" instanceID="DesignModel1">
+        <List name="stateVariables">
+            <Item value="inst:StateVariableModel1"/>
+        </List>
+        <List name="resources">
+            <Item value="inst:ColorModel1"/>
+            <Item value="inst:ColorModel2"/>
+            <Item value="inst:ColorModel3"/>
+        </List>
+        <List name="dataSources">
+            <Item value="inst:JDBCDataSourceModel1"/>
+        </List>
+        <List name="templates">
+            <Item value="inst:FormTemplateModel1"/>
+            <Item value="inst:FormTemplateModel2"/>
+            <Item value="inst:IndexButtonsTemplateModel1"/>
+        </List>
+        <List name="customClasses"/>
+        <Reference name="scene" value="inst:SceneModel1"/>
+        <Reference name="designWidth" value="flt:480.0"/>
+        <Reference name="designHeight" value="flt:320.0"/>
+        <Reference name="designProfile" value="profile:DESKTOP"/>
+        <Reference name="synchronizeDeviceAndSceneSizes" value="bool:true"/>
+    </Instance>
+    <Instance classID="StateVariableModel" instanceID="StateVariableModel1">
+        <Reference name="instanceName" value="str:currentState"/>
+        <List name="states">
+            <Item value="inst:StateModel1"/>
+            <Item value="inst:StateModel2"/>
+        </List>
+        <Reference name="startState" value="inst:StateModel1"/>
+        <Reference name="stateChangeType" value="statechange:PAUSE_AND_PLAY_FROM_START"/>
+        <Reference name="doNotAnimateOnce" value="bool:true"/>
+        <Reference name="defaultInterpolator" value="interpolator:DISCRETE"/>
+        <Reference name="defaultDuration" value="int:0"/>
+        <Reference name="onTransitionFinished" value="null"/>
+    </Instance>
+    <Instance classID="StateModel" instanceID="StateModel1">
+        <Reference name="stateName" value="str:First"/>
+        <Reference name="defaultInterpolator" value="null"/>
+        <Reference name="defaultDuration" value="null"/>
+    </Instance>
+    <Instance classID="StateModel" instanceID="StateModel2">
+        <Reference name="stateName" value="str:Second"/>
+        <Reference name="defaultInterpolator" value="null"/>
+        <Reference name="defaultDuration" value="null"/>
+    </Instance>
+    <Instance classID="ColorModel" instanceID="ColorModel1">
+        <Reference name="instanceName" value="str:color"/>
+        <Reference name="red" value="prop2:7,NOT_SET,4,null,4,null,20,anim:,,flt:0.9647059,4,null,"/>
+        <Reference name="green" value="prop2:7,NOT_SET,4,null,4,null,19,anim:,,flt:0.972549,4,null,"/>
+        <Reference name="blue" value="prop2:7,NOT_SET,4,null,4,null,21,anim:,,flt:0.98039216,4,null,"/>
+    </Instance>
+    <Instance classID="ColorModel" instanceID="ColorModel2">
+        <Reference name="instanceName" value="str:color2"/>
+        <Reference name="red" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:0.2,4,null,"/>
+        <Reference name="green" value="prop2:7,NOT_SET,4,null,4,null,21,anim:,,flt:0.49411765,4,null,"/>
+        <Reference name="blue" value="prop2:7,NOT_SET,4,null,4,null,19,anim:,,flt:0.972549,4,null,"/>
+    </Instance>
+    <Instance classID="ColorModel" instanceID="ColorModel3">
+        <Reference name="instanceName" value="str:color3"/>
+    </Instance>
+    <Instance classID="JDBCDataSourceModel" instanceID="JDBCDataSourceModel1">
+        <List name="dataSources"/>
+        <Reference name="instanceName" value="str:jdbcdataSource"/>
+        <Reference name="metaData" value="str:H4sIAAAAAAAAAFWLTUoDMRxHf2U6IDjFjedIsVtXIfmLgWSmTFJRN0O0UZR+kaQ6KzeuPIg7b+JJuvAOWujGxVu8B+/rB2WKmKzjI1uFfBf8KrHler5dhMSe/Yt/6NncZ5/iPTM+5RBNyH5fdvHt8+Pq+7TAQONoeagZJ3q/jbf5aTE2fnPeb17fAQwOAKM/KpTTy6YmlNZxRxjW3BCKWzVFxaVsyVqtajr7ZxNUoiWpXKeVUQ4lGa40jsXMusZQ2ymJoVDuBsUFv8ZIKiuaWe060UjqfwEZSyF26gAAAA=="/>
+        <Reference name="connectionString" value="prop2:7,NOT_SET,4,null,4,null,45,anim:,,str:jdbc:derby://localhost:1527/sample,4,null,"/>
+        <Reference name="user" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,str:app,4,null,"/>
+        <Reference name="password" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,str:app,4,null,"/>
+        <Reference name="query" value="prop2:7,NOT_SET,4,null,4,null,33,anim:,,str:select * from CUSTOMER,4,null,"/>
+    </Instance>
+    <Instance classID="FormTemplateModel" instanceID="FormTemplateModel1">
+        <Reference name="templateName" value="str:Form"/>
+        <Reference name="dataSource" value="null"/>
+        <Reference name="nameContainer" value="inst:VBoxModel1"/>
+        <Reference name="valueContainer" value="inst:VBoxModel2"/>
+        <Reference name="nameFont" value="null"/>
+        <Reference name="valueFont" value="null"/>
+        <List name="elements"/>
+    </Instance>
+    <Instance classID="VBoxModel" instanceID="VBoxModel1">
+        <Reference name="instanceName" value="str:formTitlesVBox"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <List name="content"/>
+        <Reference name="spacing" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+    </Instance>
+    <Instance classID="VBoxModel" instanceID="VBoxModel2">
+        <Reference name="instanceName" value="str:formValuesVBox"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <List name="content"/>
+        <Reference name="spacing" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+    </Instance>
+    <Instance classID="FormTemplateModel" instanceID="FormTemplateModel2">
+        <Reference name="templateName" value="str:Form 2"/>
+        <Reference name="dataSource" value="inst:JDBCDataSourceModel1"/>
+        <Reference name="nameContainer" value="inst:VBoxModel3"/>
+        <Reference name="valueContainer" value="inst:VBoxModel4"/>
+        <Reference name="nameFont" value="null"/>
+        <Reference name="valueFont" value="null"/>
+        <List name="elements">
+            <Item value="formelement:5,PHONE,6,PHONE:,"/>
+            <Item value="formelement:5,STATE,6,STATE:,"/>
+            <Item value="formelement:4,NAME,5,NAME:,"/>
+            <Item value="formelement:3,ZIP,4,ZIP:,"/>
+            <Item value="formelement:12,ADDRESSLINE1,13,ADDRESSLINE1:,"/>
+            <Item value="formelement:12,ADDRESSLINE2,13,ADDRESSLINE2:,"/>
+            <Item value="formelement:12,CREDIT_LIMIT,13,CREDIT LIMIT:,"/>
+            <Item value="formelement:5,EMAIL,6,EMAIL:,"/>
+            <Item value="formelement:11,CUSTOMER_ID,12,CUSTOMER ID:,"/>
+            <Item value="formelement:4,CITY,5,CITY:,"/>
+            <Item value="formelement:3,FAX,4,FAX:,"/>
+            <Item value="formelement:13,DISCOUNT_CODE,14,DISCOUNT CODE:,"/>
+        </List>
+    </Instance>
+    <Instance classID="VBoxModel" instanceID="VBoxModel3">
+        <Reference name="instanceName" value="str:formTitlesVBox2"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <List name="content">
+            <Item value="inst:LabelModel1"/>
+            <Item value="inst:LabelModel2"/>
+            <Item value="inst:LabelModel3"/>
+            <Item value="inst:LabelModel4"/>
+            <Item value="inst:LabelModel5"/>
+            <Item value="inst:LabelModel6"/>
+            <Item value="inst:LabelModel7"/>
+            <Item value="inst:LabelModel8"/>
+            <Item value="inst:LabelModel9"/>
+            <Item value="inst:LabelModel10"/>
+            <Item value="inst:LabelModel11"/>
+            <Item value="inst:LabelModel12"/>
+        </List>
+        <Reference name="spacing" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel1">
+        <Reference name="instanceName" value="str:phonetitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,17,anim:,,str:PHONE:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel2">
+        <Reference name="instanceName" value="str:statetitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,17,anim:,,str:STATE:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel3">
+        <Reference name="instanceName" value="str:nametitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,str:NAME:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel4">
+        <Reference name="instanceName" value="str:ziptitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,15,anim:,,str:ZIP:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel5">
+        <Reference name="instanceName" value="str:addressline1titleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,24,anim:,,str:ADDRESSLINE1:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel6">
+        <Reference name="instanceName" value="str:addressline2titleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,24,anim:,,str:ADDRESSLINE2:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel7">
+        <Reference name="instanceName" value="str:credit_limittitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,24,anim:,,str:CREDIT LIMIT:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel8">
+        <Reference name="instanceName" value="str:emailtitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,17,anim:,,str:EMAIL:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel9">
+        <Reference name="instanceName" value="str:customer_idtitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,23,anim:,,str:CUSTOMER ID:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel10">
+        <Reference name="instanceName" value="str:citytitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,str:CITY:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel11">
+        <Reference name="instanceName" value="str:faxtitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,15,anim:,,str:FAX:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel12">
+        <Reference name="instanceName" value="str:discount_codetitleLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,25,anim:,,str:DISCOUNT CODE:,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="VBoxModel" instanceID="VBoxModel4">
+        <Reference name="instanceName" value="str:formValuesVBox2"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <List name="content">
+            <Item value="inst:LabelModel13"/>
+            <Item value="inst:LabelModel14"/>
+            <Item value="inst:LabelModel15"/>
+            <Item value="inst:LabelModel16"/>
+            <Item value="inst:LabelModel17"/>
+            <Item value="inst:LabelModel18"/>
+            <Item value="inst:LabelModel19"/>
+            <Item value="inst:LabelModel20"/>
+            <Item value="inst:LabelModel21"/>
+            <Item value="inst:LabelModel22"/>
+            <Item value="inst:LabelModel23"/>
+            <Item value="inst:LabelModel24"/>
+        </List>
+        <Reference name="spacing" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel13">
+        <Reference name="instanceName" value="str:phonevalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,65,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;PHONE&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel14">
+        <Reference name="instanceName" value="str:statevalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,65,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;STATE&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel15">
+        <Reference name="instanceName" value="str:namevalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,64,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;NAME&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel16">
+        <Reference name="instanceName" value="str:zipvalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,63,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;ZIP&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel17">
+        <Reference name="instanceName" value="str:addressline1valueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,72,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;ADDRESSLINE1&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel18">
+        <Reference name="instanceName" value="str:addressline2valueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,72,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;ADDRESSLINE2&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel19">
+        <Reference name="instanceName" value="str:credit_limitvalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,72,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;CREDIT_LIMIT&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel20">
+        <Reference name="instanceName" value="str:emailvalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,65,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;EMAIL&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel21">
+        <Reference name="instanceName" value="str:customer_idvalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,71,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;CUSTOMER_ID&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel22">
+        <Reference name="instanceName" value="str:cityvalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,64,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;CITY&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel23">
+        <Reference name="instanceName" value="str:faxvalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,63,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;FAX&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel24">
+        <Reference name="instanceName" value="str:discount_codevalueLabel"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,73,str:bind &quot;{jdbcdataSource.getRecordSet().currentString(&quot;DISCOUNT_CODE&quot;)}&quot;,4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="IndexButtonsTemplateModel" instanceID="IndexButtonsTemplateModel1">
+        <Reference name="templateName" value="str:Index Buttons"/>
+        <Reference name="object" value="inst:JDBCDataSourceModel1"/>
+        <Reference name="previousButton" value="inst:ButtonModel1"/>
+        <Reference name="nextButton" value="inst:ButtonModel2"/>
+    </Instance>
+    <Instance classID="ButtonModel" instanceID="ButtonModel1">
+        <Reference name="instanceName" value="str:indexPreviousButton"/>
+        <Reference name="disable" value="prop2:7,NOT_SET,4,null,52,str:bind not jdbcdataSource.getRecordSet().hasPrev(),4,null,4,null,"/>
+        <Reference name="layoutInfoHFill" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,bool:true,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,19,anim:,,str:Previous,4,null,"/>
+        <Reference name="graphic" value="null"/>
+        <Reference name="action" value="prop2:7,NOT_SET,4,null,4,null,69,animcode:,,function ():Void { jdbcdataSource.getRecordSet().prev(); },4,null,"/>
+    </Instance>
+    <Instance classID="ButtonModel" instanceID="ButtonModel2">
+        <Reference name="instanceName" value="str:indexNextButton"/>
+        <Reference name="disable" value="prop2:7,NOT_SET,4,null,52,str:bind not jdbcdataSource.getRecordSet().hasNext(),4,null,4,null,"/>
+        <Reference name="layoutInfoHFill" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,bool:true,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,4,null,15,anim:,,str:Next,4,null,"/>
+        <Reference name="graphic" value="null"/>
+        <Reference name="action" value="prop2:7,NOT_SET,4,null,4,null,32,anim:,,str:indexNextButtonAction,4,null,"/>
+    </Instance>
+    <Instance classID="SceneModel" instanceID="SceneModel1">
+        <Reference name="instanceName" value="str:scene"/>
+        <List name="content">
+            <Item value="inst:HBoxModel1"/>
+            <Item value="inst:HBoxModel2"/>
+            <Item value="inst:TileModel1"/>
+        </List>
+        <Reference name="width" value="prop2:7,NOT_SET,4,null,4,null,25,anim:0,DISCRETE,flt:480.0,4,null,"/>
+        <Reference name="height" value="prop2:7,NOT_SET,4,null,4,null,25,anim:0,DISCRETE,flt:320.0,4,null,"/>
+        <Reference name="camera" value="prop2:7,NOT_SET,4,null,4,null,11,anim:,,null,4,null,"/>
+        <Reference name="cursor" value="prop2:7,NOT_SET,4,null,4,null,11,anim:,,null,4,null,"/>
+        <Reference name="fill" value="prop2:7,NOT_SET,4,null,4,null,18,anim:,,color:WHITE,24,inst:StateVariableModel1,16,inst:StateModel1,18,anim:,,color:WHITE,16,inst:StateModel2,23,anim:,,inst:ColorModel2,"/>
+        <Reference name="generateSceneInstance" value="bool:true"/>
+        <Reference name="generateGetDesignSceneFunction" value="bool:true"/>
+        <Reference name="generateLayoutXYForRootLevelComponents" value="bool:true"/>
+    </Instance>
+    <Instance classID="HBoxModel" instanceID="HBoxModel1">
+        <Reference name="instanceName" value="str:formContainerHBox"/>
+        <Reference name="layoutX" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+        <Reference name="layoutY" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <List name="content">
+            <Item value="inst:VBoxModel1"/>
+            <Item value="inst:VBoxModel2"/>
+        </List>
+        <Reference name="spacing" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+    </Instance>
+    <Instance classID="HBoxModel" instanceID="HBoxModel2">
+        <Reference name="instanceName" value="str:formContainerHBox2"/>
+        <Reference name="layoutX" value="prop2:7,NOT_SET,4,null,4,null,15,anim:,,flt:12.0,4,null,"/>
+        <Reference name="layoutY" value="prop2:7,NOT_SET,4,null,4,null,15,anim:,,flt:14.0,4,null,"/>
+        <Reference name="layoutInfoWidth" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:456.0,4,null,"/>
+        <Reference name="layoutInfoHeight" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:246.0,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <List name="content">
+            <Item value="inst:VBoxModel3"/>
+            <Item value="inst:VBoxModel4"/>
+        </List>
+        <Reference name="spacing" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+    </Instance>
+    <Instance classID="TileModel" instanceID="TileModel1">
+        <Reference name="instanceName" value="str:tile"/>
+        <Reference name="layoutX" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:172.0,4,null,"/>
+        <Reference name="layoutY" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:266.0,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <List name="content">
+            <Item value="inst:ButtonModel1"/>
+        </List>
+        <Reference name="columns" value="prop2:7,NOT_SET,4,null,4,null,12,anim:,,int:2,4,null,"/>
+        <Reference name="hgap" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+        <Reference name="vgap" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+    </Instance>
+</Model>

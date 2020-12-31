@@ -1,0 +1,9 @@
+package nbcookbooksvn;
+
+public class Person {
+<<<<<<< .mine
+    //Conflict Test
+=======
+    //Test Conflict 
+>>>>>>> .r5
+}

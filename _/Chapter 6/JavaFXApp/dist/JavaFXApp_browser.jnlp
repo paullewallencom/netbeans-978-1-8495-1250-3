@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="file:/home/dantas/NetBeansProjects/JavaFXApp/dist/" href="JavaFXApp_browser.jnlp">
+    <information>
+        <title>JavaFXApp</title>
+        <vendor>${application.vendor}</vendor>
+        <homepage href=""/>
+        <description>JavaFXApp</description>
+        <icon kind="splash" href="http://dl.javafx.com/1.3/splash.png"/>
+        <offline-allowed/>
+    </information>
+    <resources>
+        <j2se version="1.5+"/>
+        <extension name="JavaFX Runtime" href="http://dl.javafx.com/1.3/javafx-rt.jnlp"/>
+        <jar href="JavaFXApp.jar" main="true" size="170877"/>
+    </resources>
+    <applet-desc name="JavaFXApp" main-class="com.sun.javafx.runtime.adapter.Applet" progress-class="com.javafx.progressbar.ProgressManager" width="200" height="200">
+        <param name="MainJavaFXScript" value="javafxapp.Main"/>
+    </applet-desc>
+    <update check="always"/>
+</jnlp>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model modelID="fxc" modelVersion="69" rootInstance="DesignModel1" version="1">
+    <Instance classID="DesignModel" instanceID="DesignModel1">
+        <List name="stateVariables">
+            <Item value="inst:StateVariableModel1"/>
+        </List>
+        <List name="resources">
+            <Item value="inst:ListCellFactoryModel1"/>
+        </List>
+        <List name="dataSources">
+            <Item value="inst:HTTPDataSourceModel1"/>
+            <Item value="inst:HTTPDataSourceModel2"/>
+        </List>
+        <List name="templates"/>
+        <List name="customClasses"/>
+        <Reference name="scene" value="inst:SceneModel1"/>
+        <Reference name="designWidth" value="flt:640.0"/>
+        <Reference name="designHeight" value="flt:480.0"/>
+        <Reference name="designProfile" value="profile:DESKTOP"/>
+        <Reference name="synchronizeDeviceAndSceneSizes" value="bool:true"/>
+    </Instance>
+    <Instance classID="StateVariableModel" instanceID="StateVariableModel1">
+        <Reference name="instanceName" value="str:currentState"/>
+        <List name="states"/>
+        <Reference name="startState" value="null"/>
+        <Reference name="stateChangeType" value="statechange:PAUSE_AND_PLAY_FROM_START"/>
+        <Reference name="doNotAnimateOnce" value="bool:true"/>
+        <Reference name="defaultInterpolator" value="interpolator:DISCRETE"/>
+        <Reference name="defaultDuration" value="int:0"/>
+        <Reference name="onTransitionFinished" value="null"/>
+    </Instance>
+    <Instance classID="ListCellFactoryModel" instanceID="ListCellFactoryModel1">
+        <Reference name="instanceName" value="str:listCellFactory"/>
+        <Reference name="listCell" value="inst:ListCellModel1"/>
+    </Instance>
+    <Instance classID="ListCellModel" instanceID="ListCellModel1">
+        <Reference name="instanceName" value="str:listCell"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="node" value="inst:LabelModel1"/>
+    </Instance>
+    <Instance classID="LabelModel" instanceID="LabelModel1">
+        <Reference name="instanceName" value="str:label"/>
+        <Reference name="visible" value="prop2:7,NOT_SET,4,null,27,str:bind not listCell.empty,4,null,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="text" value="prop2:7,NOT_SET,4,null,83,str:bind (listCell.item as org.netbeans.javafx.datasrc.Record).getString(&quot;message&quot;),4,null,4,null,"/>
+        <Reference name="graphic" value="null"/>
+    </Instance>
+    <Instance classID="HTTPDataSourceModel" instanceID="HTTPDataSourceModel1">
+        <List name="dataSources">
+            <Item value="inst:FilterDataSourceModel1"/>
+        </List>
+        <Reference name="instanceName" value="str:httpdataSource"/>
+        <Reference name="metaData" value="str:H4sIAAAAAAAAAFvzloG1uIjBKL8oXS8vtSQpNTGvWC83P6U0J7VYLyuxLDGtQi8lsSSxuChZzzexuCS1yDe1JBEk8rKobmln2GkRZgZGHwaOXKhoCQO/D0ibfmlJZo6+b2KBdUVBeTADAwMjEDMxsOemFhcnpqcCOSlgQSQBiBArA3NpZgpCnKUkMzeVga04v7QoOZWBsxhoRWlxfGZKBQB3AUZRugAAAA=="/>
+        <Reference name="url" value="prop2:7,NOT_SET,4,null,4,null,171,anim:,,str:https://api.facebook.com/method/status.get?access_token=2227470867|2.kSnngaOxkEeKrAdVXV_iWg__.3600.1283004000-730419477|ukcK-OUQniPK_pIi8oyGkZ_2Dbc.&amp;format=json,4,null,"/>
+        <Reference name="user" value="prop2:7,NOT_SET,4,null,4,null,26,anim:,,str:dantas@live.com,4,null,"/>
+        <Reference name="password" value="prop2:7,NOT_SET,4,null,4,null,23,anim:,,str:f4c3b00kp4ss,4,null,"/>
+        <Reference name="parser" value="prop2:7,NOT_SET,4,null,4,null,20,anim:,,dsparser:JSON,4,null,"/>
+    </Instance>
+    <Instance classID="FilterDataSourceModel" instanceID="FilterDataSourceModel1">
+        <List name="dataSources"/>
+        <Reference name="expression" value="str:message"/>
+    </Instance>
+    <Instance classID="HTTPDataSourceModel" instanceID="HTTPDataSourceModel2">
+        <List name="dataSources">
+            <Item value="inst:FilterDataSourceModel2"/>
+        </List>
+        <Reference name="instanceName" value="str:httpdataSource2"/>
+        <Reference name="metaData" value="str:H4sIAAAAAAAAAEVQO1IDMQxVCCG7ITM00FBwhM0MLVdIWtodxVY2Juu1x9KGLAU9B6HjJpyEgjsgZ8KkkEd6+rz3/PULE07wGFJTdSRrwo4rH2zfElcvuMfNobIoyMlUK2ShtCLBjPyk98+P5+/bMYyWUPgTKnCzzGuLXly7WGF8OsQ3gNE96KNxAXDKxnCF7br3DJMYWBiKmMLGKe8/APCgcQcFGgmpdhZKDn0ylNNpTG6PZoAZiqDZeupEQV3M3UsZIsG8j6qJbC3Oa6VnXOjq1nU7hlIwNXQcnnpixoagjJQ85j7MBJtGN53VUcf11llLHUxat1OBBcZYZ7vqQTO9MTeJzlTl3tErHSVfq7zk1n2mhsIEn4UyzNSpfma9o+HwB5BUv5uEAQAA"/>
+        <Reference name="url" value="prop2:7,NOT_SET,4,null,4,null,171,anim:,,str:https://api.facebook.com/method/stream.get?access_token=2227470867|2.V2JgA6k7R9GqJtaFY7J5dw__.3600.1283007600-730419477|HfWVbf8AaLYrSz5J4NtVC1YmyhU.&amp;format=json,4,null,"/>
+        <Reference name="user" value="prop2:7,NOT_SET,4,null,4,null,26,anim:,,str:dantas@live.com,4,null,"/>
+        <Reference name="password" value="prop2:7,NOT_SET,4,null,4,null,23,anim:,,str:f4c3b00kp4ss,4,null,"/>
+        <Reference name="parser" value="prop2:7,NOT_SET,4,null,4,null,20,anim:,,dsparser:JSON,4,null,"/>
+    </Instance>
+    <Instance classID="FilterDataSourceModel" instanceID="FilterDataSourceModel2">
+        <List name="dataSources"/>
+        <Reference name="expression" value="str:posts"/>
+    </Instance>
+    <Instance classID="SceneModel" instanceID="SceneModel1">
+        <Reference name="instanceName" value="str:scene"/>
+        <List name="content">
+            <Item value="inst:ListViewModel1"/>
+            <Item value="inst:ListViewModel2"/>
+        </List>
+        <Reference name="width" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:640.0,4,null,"/>
+        <Reference name="height" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:480.0,4,null,"/>
+        <Reference name="generateSceneInstance" value="bool:true"/>
+        <Reference name="generateGetDesignSceneFunction" value="bool:true"/>
+        <Reference name="generateLayoutXYForRootLevelComponents" value="bool:true"/>
+    </Instance>
+    <Instance classID="ListViewModel" instanceID="ListViewModel1">
+        <Reference name="instanceName" value="str:listView"/>
+        <Reference name="layoutX" value="prop2:7,NOT_SET,4,null,4,null,14,anim:,,flt:6.0,4,null,"/>
+        <Reference name="layoutY" value="prop2:7,NOT_SET,4,null,4,null,15,anim:,,flt:63.0,4,null,"/>
+        <Reference name="layoutInfoWidth" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:293.0,4,null,"/>
+        <Reference name="layoutInfoHeight" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:384.0,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="items" value="prop2:7,NOT_SET,4,null,69,str:bind httpdataSource.getDataSource(&quot;message&quot;).getRecordSet().all(),4,null,4,null,"/>
+        <Reference name="cellFactory" value="prop2:7,NOT_SET,4,null,4,null,33,anim:,,inst:ListCellFactoryModel1,4,null,"/>
+    </Instance>
+    <Instance classID="ListViewModel" instanceID="ListViewModel2">
+        <Reference name="instanceName" value="str:listViewStream"/>
+        <Reference name="layoutX" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:341.0,4,null,"/>
+        <Reference name="layoutY" value="prop2:7,NOT_SET,4,null,4,null,15,anim:,,flt:63.0,4,null,"/>
+        <Reference name="layoutInfoWidth" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:290.0,4,null,"/>
+        <Reference name="layoutInfoHeight" value="prop2:7,NOT_SET,4,null,4,null,16,anim:,,flt:384.0,4,null,"/>
+        <Reference name="gridLayoutInfoHLocation" value="int:0"/>
+        <Reference name="gridLayoutInfoVLocation" value="int:0"/>
+        <Reference name="clip" value="null"/>
+        <Map name="customProperties"/>
+        <Reference name="customClass" value="null"/>
+        <Reference name="tooltip" value="null"/>
+        <Reference name="items" value="prop2:7,NOT_SET,4,null,111,str:bind for(record in httpdataSource2.getDataSource(&quot;posts&quot;).getRecordSet().all()) record.getString(&quot;message&quot;),4,null,4,null,"/>
+    </Instance>
+</Model>

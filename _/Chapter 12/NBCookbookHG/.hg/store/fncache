@@ -1,0 +1,9 @@
+data/.hgignore.i
+data/build.xml.i
+data/manifest.mf.i
+data/nbproject/build-impl.xml.i
+data/nbproject/genfiles.properties.i
+data/nbproject/project.properties.i
+data/nbproject/project.xml.i
+data/src/nbcookbookhg/NBCookbookHG.java.i
+data/src/nbcookbookhg/Car.java.i

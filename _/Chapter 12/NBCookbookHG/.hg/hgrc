@@ -1,0 +1,7 @@
+[paths]
+default = ssh://rhawidantas@nbcookbook.hg.sourceforge.net/hgroot/nbcookbook/nbcookbook
+default-push = ssh://rhawidantas@nbcookbook.hg.sourceforge.net/hgroot/nbcookbook/nbcookbook
+
+[ui]
+username = rhawidantas
+
